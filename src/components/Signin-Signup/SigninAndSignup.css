@@ -1,0 +1,81 @@
+.SigninAndSignup {
+  width: 100%;
+  background: #333;
+  height: calc(100vh - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signin {
+  width: 400px;
+  background: #00000055;
+  padding: 50px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  color: #777;
+  position: relative;
+}
+
+.form-group > label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: all 0.3s !important;
+  z-index: 1;
+}
+
+.form-group > label.focus {
+ top: -20px;
+}
+
+.form-group > input:focus label {
+  margin-bottom: 0px;
+}
+
+.form-group > input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #555;
+  color: #fff;
+  padding: 3px;
+  z-index: 3;
+}
+
+.form-group > button {
+  background: greenyellow;
+  color: #111;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-group > input:focus {
+  background: transparent;
+  outline: none;
+  border-bottom: 2px solid #555;
+}
+
+.button-group {
+ display: flex;
+ justify-content: space-between; 
+ align-items:center; 
+ margin:15px 0px; 
+} 
+
+.button-group > button {
+ background:#26329e; 
+ color:#fff;
+ padding:8px 12px; 
+ width:48%;
+ cursor:pointer;
+}
+
+.signin-bottom > a{
+color:#6d84ce;
+}

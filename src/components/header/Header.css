@@ -1,0 +1,25 @@
+.Header {
+
+ background: #100e17;
+ width: 100%;
+}
+.HeaderContainer {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 40px;
+ padding:0px 20px;
+}
+
+.Header a {
+ text-decoration: none ;
+}
+
+.Header .logo {
+ color:#555;
+}
+
+.Header .options .option {
+  margin: 0px 10px;
+  color:#fff;
+}
