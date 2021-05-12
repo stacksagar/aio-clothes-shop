@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/aio-clothes-shop/static/css/main.81a8a1b4.chunk.css",
+    "main.js": "/aio-clothes-shop/static/js/main.72bf17c9.chunk.js",
+    "main.js.map": "/aio-clothes-shop/static/js/main.72bf17c9.chunk.js.map",
+    "runtime-main.js": "/aio-clothes-shop/static/js/runtime-main.a32e2136.js",
+    "runtime-main.js.map": "/aio-clothes-shop/static/js/runtime-main.a32e2136.js.map",
+    "static/js/2.7f3acd0b.chunk.js": "/aio-clothes-shop/static/js/2.7f3acd0b.chunk.js",
+    "static/js/2.7f3acd0b.chunk.js.map": "/aio-clothes-shop/static/js/2.7f3acd0b.chunk.js.map",
+    "index.html": "/aio-clothes-shop/index.html",
+    "static/css/main.81a8a1b4.chunk.css.map": "/aio-clothes-shop/static/css/main.81a8a1b4.chunk.css.map",
+    "static/js/2.7f3acd0b.chunk.js.LICENSE.txt": "/aio-clothes-shop/static/js/2.7f3acd0b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a32e2136.js",
+    "static/js/2.7f3acd0b.chunk.js",
+    "static/css/main.81a8a1b4.chunk.css",
+    "static/js/main.72bf17c9.chunk.js"
+  ]
+}
