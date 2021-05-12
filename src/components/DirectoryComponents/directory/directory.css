@@ -1,0 +1,17 @@
+body {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  background: #eeeeee; 
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Directory {
+  grid-template-columns: repeat(24, auto);
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px;
+}

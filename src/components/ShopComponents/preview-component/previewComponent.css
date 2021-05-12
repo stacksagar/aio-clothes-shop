@@ -1,0 +1,13 @@
+.PreviewColletion {
+  margin-bottom:10px;
+  z-index: -1;
+  padding:10px;
+} 
+ 
+.PreviewColletionContainer {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  color: white;
+} 

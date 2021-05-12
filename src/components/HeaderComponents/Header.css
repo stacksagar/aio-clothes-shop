@@ -1,0 +1,55 @@
+.Header {
+  background: #100e10;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 99 !important;
+}
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  padding: 0px 20px;
+}
+
+.Header a {
+  text-decoration: none;
+}
+
+.Header .logo {
+  color: #555;
+}
+
+.Header .options .option {
+  margin: 0px 10px;
+  color: #fff;
+}
+
+.added {
+  position: absolute;
+  margin: auto;
+  right: 60px;
+  top: 0px;
+  color: #c8ff01;
+  opacity:0;
+  font-size:12px;
+}
+
+.added.ani {
+  animation-name: added;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+@keyframes added {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}

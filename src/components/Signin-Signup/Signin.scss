@@ -1,0 +1,98 @@
+.Signin {
+  width: 100%;
+  background: #333;
+  height: calc(100vh - 55px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-container {
+  width: 550px;
+  background: #00000055;
+  padding: 50px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  color: #777;
+  position: relative;
+}
+
+.form-group > label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: all 0.3s !important;
+  z-index: 1;
+}
+
+.form-group > label.focus {
+  top: -20px;
+}
+
+.form-group > input:focus label {
+  margin-bottom: 0px;
+}
+
+.form-group > input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #555;
+  color: #fff;
+  padding: 3px;
+  z-index: 3;
+}
+
+.form-group > button {
+  background: greenyellow;
+  color: #111;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-group > input:focus {
+  background: transparent;
+  outline: none;
+  border-bottom: 2px solid #555;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0px;
+
+  button {
+    background: #555555;
+    color: #fff;
+    width: 49%;
+    padding: 6px 0px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase; 
+    font-family: Tahoma;
+  }
+
+  button:focus {
+    background: #666666;
+    outline: none;
+    border: none;
+  }
+
+  button.googleSignin {
+    background: #4285f4 !important;
+    &:hover {
+      background: #357ae8 !important;
+    }
+  }
+}
+
+.signin-bottom > a {
+  color: #e38feb;
+}
