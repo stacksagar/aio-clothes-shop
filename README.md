@@ -6,6 +6,10 @@
 
 ###### React Project `Clothes Shop` [See Live Preview](https://stacksagar.github.io/aio-clothes-shop 'project of @stacksagar')
 
+## <a href="https://stacksagar.github.io/aio-clothes-shop"> Preview on github_pages > https://stacksagar.github.io/aio-clothes-shop</a>
+
+## <a href="https://aio-clothes-shop.web.app">Preview on Firebaes > https://aio-clothes-shop.web.app</a>
+
 > Clothes Shop with fully functionality - Front-end, Back-end, Stripe Peyment System (homepage/shop-page/category-shop-page/login-page/register-page/Checkout-page).
  
  <a href="https://stacksagar.github.io/aio-clothes-shop" >
