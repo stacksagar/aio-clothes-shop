@@ -35,17 +35,17 @@ const Header = (props) => {
               <span className="absolute text-white text-xs -top-3 left-2 m-auto">
                 <small>{currentUser.displayName || 'John'}</small>
               </span>
-              <Link className="m-0 option" onClick={signOut} to="/signin">
+              <Link to="/signin"> className="m-0 option" onClick={signOut}
                 Signout
               </Link>
             </div>
           ) : (
             <>
-              <Link className="option" to="signup">
+              <Link className="option" to="/signup">
                 {' '}
                 Signup{' '}
               </Link>
-              <Link to="signin" className="option">
+              <Link to="/signin" className="option">
                 {' '}
                 Signin{' '}
               </Link>
