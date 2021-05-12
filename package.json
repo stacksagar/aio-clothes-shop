@@ -1,7 +1,6 @@
 {
   "name": "ecommerce",
   "version": "0.1.0",
-  "homepage": "https://stacksagar.github.io/aio-clothes-shop",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.2",
