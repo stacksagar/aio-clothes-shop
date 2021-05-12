@@ -9,7 +9,7 @@
 > Clothes Shop with fully functionality - Front-end, Back-end, Stripe Peyment System (homepage/shop-page/category-shop-page/login-page/register-page/Checkout-page).
  
  <a href="https://stacksagar.github.io/aio-clothes-shop" >
-  <img src="https://i.ibb.co/DkR2ns3/aio-clothes-shop-by-stacksagar-png" alt="aio-clothes-shop-by-stacksagar" border="0">
+  <img src="https://i.ibb.co/DkR2ns3/aio-clothes-shop-by-stacksagar-png.png" alt="aio-clothes-shop-by-stacksagar" border="0">
  </a>
 
 <!-- HOW TO RUN -->
