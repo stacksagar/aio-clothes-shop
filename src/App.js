@@ -13,7 +13,7 @@ import { createStructuredSelector } from 'reselect';
 import Checkout from './components/CartComponents/checkout/Checkout';
 
 const App = ({ currentUser, setCurrentUser }) => {
-  React.useEffect(() => {
+  React.useEffect(() => { 
     let unsubscribe;
 
     const getUser = async () => {
