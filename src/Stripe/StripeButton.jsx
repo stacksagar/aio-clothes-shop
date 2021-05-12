@@ -8,7 +8,6 @@ const StripeButton = ({price}) => {
  const publishabledKey = 'pk_test_51IpyLrSJnYdVoPUj9su6SDnxU0vqjF1LLrX4Eh8zIsBv3ECIie93Vki9sA4im7iQtB1kUrlr9RxtzH1MgttzqmmP00UC9OlMDk'
 
  const onToken = token => {
-  console.log("Token > ", token)
   alert("Peyment Successfull!")
  }
 
