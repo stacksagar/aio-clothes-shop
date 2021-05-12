@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.47d1d5c9.chunk.css",
-    "main.js": "/static/js/main.4cb24e2d.chunk.js",
-    "main.js.map": "/static/js/main.4cb24e2d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.935dd2fa.js",
-    "runtime-main.js.map": "/static/js/runtime-main.935dd2fa.js.map",
-    "static/js/2.ddc92338.chunk.js": "/static/js/2.ddc92338.chunk.js",
-    "static/js/2.ddc92338.chunk.js.map": "/static/js/2.ddc92338.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.47d1d5c9.chunk.css.map": "/static/css/main.47d1d5c9.chunk.css.map",
-    "static/js/2.ddc92338.chunk.js.LICENSE.txt": "/static/js/2.ddc92338.chunk.js.LICENSE.txt"
+    "main.css": "/aio-clothes-shop/static/css/main.47d1d5c9.chunk.css",
+    "main.js": "/aio-clothes-shop/static/js/main.e4397f85.chunk.js",
+    "main.js.map": "/aio-clothes-shop/static/js/main.e4397f85.chunk.js.map",
+    "runtime-main.js": "/aio-clothes-shop/static/js/runtime-main.a32e2136.js",
+    "runtime-main.js.map": "/aio-clothes-shop/static/js/runtime-main.a32e2136.js.map",
+    "static/js/2.d6baf039.chunk.js": "/aio-clothes-shop/static/js/2.d6baf039.chunk.js",
+    "static/js/2.d6baf039.chunk.js.map": "/aio-clothes-shop/static/js/2.d6baf039.chunk.js.map",
+    "index.html": "/aio-clothes-shop/index.html",
+    "static/css/main.47d1d5c9.chunk.css.map": "/aio-clothes-shop/static/css/main.47d1d5c9.chunk.css.map",
+    "static/js/2.d6baf039.chunk.js.LICENSE.txt": "/aio-clothes-shop/static/js/2.d6baf039.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.935dd2fa.js",
-    "static/js/2.ddc92338.chunk.js",
+    "static/js/runtime-main.a32e2136.js",
+    "static/js/2.d6baf039.chunk.js",
     "static/css/main.47d1d5c9.chunk.css",
-    "static/js/main.4cb24e2d.chunk.js"
+    "static/js/main.e4397f85.chunk.js"
   ]
 }
