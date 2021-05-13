@@ -5,17 +5,28 @@ import ShopComponent from './components/ShopComponents/shop-collections/ShopRout
 import Signin from './components/Signin-Signup/Signin.jsx';
 import Signup from './components/Signin-Signup/Signup.jsx';
 import Homepage from './Homepage';
-import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import {
+  addCollectionAndDocuments,
+  auth,
+  createUserProfileDocument,
+} from './firebase/firebase.utils';
 import { connect } from 'react-redux';
 import { SET_CURRENT_USER } from './Redux/actions';
 import { selectCurrentUser } from './Redux/selectors/user.selectors';
 import { createStructuredSelector } from 'reselect';
 import Checkout from './components/CartComponents/checkout/Checkout';
+import { selectCollectionsAndMakeArray } from './Redux/selectors/local.database.selector';
 
-const App = ({ currentUser, setCurrentUser }) => {
-  React.useEffect(() => { 
+const App = ({ currentUser, setCurrentUser, getCollections }) => {
+  React.useEffect(() => {
+    addCollectionAndDocuments(
+      'collections',
+      getCollections.map(({ title, items }) => ({ title, items }))
+    );
+  });
+
+  React.useEffect(() => {
     let unsubscribe;
-
     const getUser = async () => {
       unsubscribe = await auth.onAuthStateChanged((user) => {
         if (user) {
@@ -28,13 +39,10 @@ const App = ({ currentUser, setCurrentUser }) => {
         }
       });
     };
-
     getUser();
-
     return function cleanup() {
       unsubscribe();
     };
-    
   }, [setCurrentUser]);
 
   return (
@@ -63,6 +71,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
+  getCollections: selectCollectionsAndMakeArray,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

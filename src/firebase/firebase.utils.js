@@ -3,13 +3,13 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-  apiKey: "AIzaSyBzZUNAyAA97f3be5RpKpCStRrZFlYyMjQ",
-  authDomain: "aio-clothes-shop.firebaseapp.com",
-  projectId: "aio-clothes-shop",
-  storageBucket: "aio-clothes-shop.appspot.com",
-  messagingSenderId: "274937086542",
-  appId: "1:274937086542:web:6e8b56bd4774a9a5e9791f",
-  measurementId: "G-B6SDVTN1ZG"
+  apiKey: 'AIzaSyBzZUNAyAA97f3be5RpKpCStRrZFlYyMjQ',
+  authDomain: 'aio-clothes-shop.firebaseapp.com',
+  projectId: 'aio-clothes-shop',
+  storageBucket: 'aio-clothes-shop.appspot.com',
+  messagingSenderId: '274937086542',
+  appId: '1:274937086542:web:6e8b56bd4774a9a5e9791f',
+  measurementId: 'G-B6SDVTN1ZG',
 };
 
 firebase.initializeApp(config);
@@ -23,16 +23,15 @@ provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export const createUserProfileDocument = async (authUser, additionalData) => {
-  
   if (!authUser) return;
 
   const userRef = firestore.doc(`users/${authUser.uid}`);
-  const snapShot = await userRef.get(); 
+  const snapShot = await userRef.get();
 
   if (!snapShot.exists) {
     try {
-    const { displayName, email } = authUser;
-    const createAt = new Date();
+      const { displayName, email } = authUser;
+      const createAt = new Date();
       await userRef.set({
         displayName,
         email,
@@ -43,8 +42,36 @@ export const createUserProfileDocument = async (authUser, additionalData) => {
       console.log('error ', error.message);
     }
   }
-  
+
   return userRef;
+};
+
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+
+  const collectionRef = firestore.collection(collectionKey);
+
+  objectsToAdd.forEach((obj) => {
+    const newDocRef = collectionRef.doc()
+    newDocRef.set(obj)
+  });
+
+
+  // firestore.collection('cities')
+  //   .doc('LA')
+  //   .set({
+  //     name: 'Los Angeles',
+  //     state: 'CA',
+  //     country: 'USA',
+  //   })
+  //   .then(() => {
+  //     console.log('Document successfully written!');
+  //   })
+  //   .catch((error) => {
+  //     console.error('Error writing document: ', error);
+  //   });
 };
 
 export default firebase;
