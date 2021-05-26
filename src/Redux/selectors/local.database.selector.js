@@ -15,10 +15,22 @@ export const selectCollections = createSelector(
 export const selectCollectionsAndMakeArray = createSelector(
   selectCollections,
   (collectionsObject) =>
-    Object.keys(collectionsObject).map((key) => collectionsObject[key])
+    collectionsObject
+      ? Object.keys(collectionsObject).map((key) => collectionsObject[key])
+      : []
 );
 
 export const SelectCollection = (paramUrl) =>
-  createSelector(selectCollections, (collections) => collections[paramUrl]);
+  createSelector(selectCollections, (collections) =>
+    collections ? collections[paramUrl] : null
+  );
 
-  
+export const selectIsCollectionFetching = createSelector(
+  selectLocalDatabase,
+  (localDB) => localDB.isFetching
+);
+
+export const selectIsCollectionIsLoaded = createSelector(
+  selectLocalDatabase,
+  (localDB) => !!localDB.collections
+);

@@ -12,7 +12,6 @@ const ShopCollection = ({ collection }) => {
       <h1 className="text-4xl p-3">{title}</h1>
       <div className="shop_collection">
         {items
-          .filter((_, i) => i < 4)
           .map((item) => (
             <ItemCollection key={item.id} item={item} />
           ))}

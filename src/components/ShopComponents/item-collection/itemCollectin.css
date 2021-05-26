@@ -1,6 +1,6 @@
 .ItemCollection { 
  background:#ffffff; 
- height:220px; 
+ height:350px; 
  display:flex;
  flex-direction: column;
  border-radius:3px;

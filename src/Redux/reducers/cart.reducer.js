@@ -17,7 +17,6 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         ...state,
         cartItems: [...addToCartItem(state.cartItems, action.payload)],
       };
-
     case actionTypes.REMOVE_CART_ITEM:
       return {
         ...state,

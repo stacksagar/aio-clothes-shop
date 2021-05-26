@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
-import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
+import { signupStart } from '../../Redux/actions';
 import './Signup.scss';
 
 class Signup extends React.Component {
@@ -25,35 +26,34 @@ class Signup extends React.Component {
 
   submitHandler = async (e) => {
     e.preventDefault();
-
     const { displayName, email, password, confirmPassword } = this.state.signup;
-
     if (password !== confirmPassword) {
       alert("password does't match!");
       return;
     }
+    
+    this.props.signupStart({ email, password, displayName });
+    
+    // try {
+    //   const { user } = await auth.createUserWithEmailAndPassword(
+    //     email,
+    //     password
+    //   );
+    //   await createUserProfileDocument(user, { displayName });
+    //   this.setState({
+    //     signup: {
+    //       displayName: '',
+    //       email: '',
+    //       password: '',
+    //       confirmPassword: '',
+    //     },
+    //   });
+    //   this.props.history.push('/shop');
+    // } catch (e) {
+    //   alert(e.message);
+    // }
 
-    try {
-      const { user } = await auth.createUserWithEmailAndPassword(
-        email,
-        password
-      )
-      
-      await createUserProfileDocument(user, { displayName });
 
-      this.setState({
-        signup: { 
-          displayName: '',
-          email: '',
-          password: '',
-          confirmPassword: '',
-        },
-      });
-      
-      this.props.history.push('/shop');
-    } catch (e) {
-      alert(e.message);
-    }
   };
 
   render() {
@@ -126,7 +126,7 @@ class Signup extends React.Component {
               htmlFor="confirmPassword"
               className={`${confirmPasswordFocus ? 'focus' : ''}`}
             >
-              confirm Password
+              Confirm Password
             </label>
             <input
               onChange={this.onChangeHandler}
@@ -155,4 +155,8 @@ class Signup extends React.Component {
   }
 }
 
-export default withRouter(Signup);
+const mapDispatchToProps = (dispatch) => ({
+  signupStart: (val) => dispatch(signupStart(val)),
+});
+
+export default connect(null, mapDispatchToProps)(withRouter(Signup));
