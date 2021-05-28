@@ -10,6 +10,9 @@ body {
 }
 
 .Directory {
+  width:100%;
+  justify-self: center;
+  background: #000;
   grid-template-columns: repeat(24, auto);
   display: grid;
   grid-gap: 20px;

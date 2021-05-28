@@ -1,7 +1,8 @@
 .Signup {
   width: 100%;
   background: #333;
-  height: calc(100vh - 55px);
+  // height: calc(100vh - 55px);
+  height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,9 +11,15 @@
 .signup-container {
   width: 550px;
   background: #00000055;
-  padding: 50px;
+  padding:100px 50px;
   border-radius: 3px;
   color: #fff;
+}
+
+@media screen and(max-width:768px) {
+  .Signup, .Signin, .signin-container, .signup-container {
+    background:#222 !important;
+  }
 }
 
 .form-group {
@@ -75,7 +82,7 @@
     padding: 6px 0px;
     cursor: pointer;
     transition: all 0.2s;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     font-family: Tahoma;
   }
 
@@ -84,7 +91,6 @@
     outline: none;
     border: none;
   }
- 
 }
 
 .signin-bottom > a {
