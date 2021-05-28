@@ -1,7 +1,7 @@
 body {
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
     sans-serif;
-  background: #eeeeee; 
+  background: #eeeeee;
 }
 
 * {
@@ -10,11 +10,43 @@ body {
 }
 
 .Directory {
-  width:100%;
-  justify-self: center;
-  background: #000;
-  grid-template-columns: repeat(24, auto);
   display: grid;
+  grid-template-areas:
+    'hats hats jackets jackets sneakers sneakers'
+    'womens womens womens mens mens mens';
   grid-gap: 20px;
   padding: 20px;
+}
+
+@media (max-width: 1020px) {
+  .Directory {
+    grid-template-areas:
+      'hats hats hats jackets jackets jackets'
+      'sneakers sneakers sneakers womens womens womens'
+      'mens mens mens mens mens mens' !important;
+  }
+
+  .Menu-item.large {
+    height:255px !important;
+  }
+  .Menu-item.large:last-child {
+    height:400px !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .Directory {
+    grid-template-areas:
+      'hats hats hats hats hats hats '
+      'jackets jackets jackets jackets jackets jackets '
+      'sneakers sneakers sneakers sneakers sneakers sneakers'
+      'womens womens womens womens womens womens'
+      'mens mens mens mens mens mens' !important;
+  }
+  .Menu-item {
+    height: 270px !important;
+  } 
+  .Menu-item.large:last-child {
+    height:270px !important;
+  }
 }

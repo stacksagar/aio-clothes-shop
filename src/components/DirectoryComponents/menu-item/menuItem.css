@@ -4,9 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center; 
-  height:250px;
+  height:255px;
   grid-column: span 8;    
   position: relative; 
+  overflow: hidden;
+  z-index: 98;  
 }
 
 .backgroundImage {
@@ -39,25 +41,19 @@
   margin: 4px 0px;
 }
 
-.Menu-item:nth-child(4),
+.Menu-item:nth-child(1) {
+  grid-area: hats;
+}
+.Menu-item:nth-child(2) {
+  grid-area: jackets;
+}
+.Menu-item:nth-child(3) {
+  grid-area: sneakers;
+}
+.Menu-item:nth-child(4) {
+  grid-area: womens;
+}
 .Menu-item:nth-child(5) {
-  grid-column: span 12;
+  grid-area: mens;
 }
-
-@media (max-width: 1020px) {
-  .Menu-item {
-    grid-column: span 12 !important;
-  }
-  .Menu-item.large {
-    height: 250px !important;
-  }
-}
-
-@media (max-width: 500px) {
-  .Menu-item {
-    grid-column: span 24 !important;  
-    width:400px; 
-    background: #fff !important;
-    padding:40px !important;
-  }
-}
+ 
