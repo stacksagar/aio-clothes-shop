@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-// import { connect } from 'react-redux';
-// import { SelectCollection } from '../../../Redux/selectors/local.database.selector';
+import { connect } from 'react-redux';
+import { SelectCollection } from '../../../Redux/selectors/local.database.selector';
 import ItemCollection from '../item-collection/ItemCollection';
 import './Shop-collection.scss';
 
@@ -24,9 +24,8 @@ const ShopCollection = ({ match, collection }) => {
   );
 };
 
-// const mapStateToProps = (state, props) => ({
-//   collection: SelectCollection(props.match.params.category)(state),
-// });
+const mapStateToProps = (state, props) => ({
+  collection: SelectCollection(props.match.params.category)(state),
+});
 
-// export default connect(mapStateToProps)(ShopCollection);
-export default withRouter(ShopCollection);
+export default connect(mapStateToProps)(ShopCollection); 

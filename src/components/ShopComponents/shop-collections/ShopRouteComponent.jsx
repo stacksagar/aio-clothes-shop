@@ -3,8 +3,8 @@ import { Route } from 'react-router';
 import { connect } from 'react-redux';
 import { fetchCollectionsStart } from '../../../Redux/actions';
 
-import ShopCollectionContainer from '../shop-collection/Shop-collection-container';
-import ShopCollectionsContainer from './Shop-collections-container';
+import ShopCollectionContainer from '../shop-collection/Shop-collection';
+import ShopCollectionsContainer from './Shop-collections';
 
 const ShopComponent = ({ match, fetchCollectionsStart }) => {
   React.useEffect(() => {
