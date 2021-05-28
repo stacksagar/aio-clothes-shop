@@ -4,11 +4,15 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 
 import { signoutStart } from '../../Redux/actions'; 
-import CartDropdown from '../CartComponents/cart-dropdown/CartDropdown';
-import CartIcon from '../CartComponents/cart-icon/CartIcon';
 import { selectCartAnimation } from '../../Redux/selectors/cart.selectors';
 import { selectCurrentUser } from '../../Redux/selectors/user.selectors';
 import { createStructuredSelector } from 'reselect';
+
+import CartDropdownContainer from '../CartComponents/cart-dropdown/CartDropdownContainer';
+import CartIconContainer from '../CartComponents/cart-icon/CartIconContainer';
+// it's^ for use graphql 
+// import CartIcon from '../CartComponents/cart-icon/CartIcon';
+// import CartDropdown from '../CartComponents/cart-dropdown/CartDropdown';
 
 const Header = (props) => {
   const {  currentUser, animation, signOutStart } = props; 
@@ -39,10 +43,11 @@ const Header = (props) => {
 
           <span className={`added ${animation && 'ani'}`}>Added</span>
 
-          <CartIcon />
-        </nav>
+          <CartIconContainer />
+        </nav> 
 
-        <CartDropdown />
+        {/* <CartDropdown /> */}
+        <CartDropdownContainer />
       </div>
     </menu>
   );

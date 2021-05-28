@@ -4,13 +4,14 @@ import { withRouter } from 'react-router';
 import { createStructuredSelector } from 'reselect';
 import { clearAllCart, TOGGLE_CART_HIDDEN } from '../../../Redux/actions';
 import {
-  selectCartHidden,
+  // selectCartHidden,
   selectCartItems,
 } from '../../../Redux/selectors/cart.selectors';
 import CartItem from '../cart-item/CartItem';
 import './CartDropdown.scss';
 
-const CartDropdown = ({ hidden, cartItems, history, clearAll, toggleCart }) => {
+const CartDropdown = ({ /* this */ hidden /* come from graphql*/ , cartItems, history, clearAll, toggleCart }) => {
+  
   return (
     <div className={`CartDropdown ${hidden && 'hiddenCart'}`}>
       <div className="cartDropdown-container">
@@ -51,7 +52,7 @@ const CartDropdown = ({ hidden, cartItems, history, clearAll, toggleCart }) => {
 };
 
 const mapStateToProps = createStructuredSelector({
-  hidden: selectCartHidden,
+  // hidden: selectCartHidden,
   cartItems: selectCartItems,
 });
 
